@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<style>
+    /* .box1{
+        width: 20%;
+        height: 100px;
+        background-color: green;
+        float: left;
+        margin: 30px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    } */
+</style>
+
+<body>
+    <!-- onmouseover & onmouseout Event -->
+    <div class="box1" onmouseover="mOver(this)"onmouseleave="mOut(this)">
+        <h1>Event Property</h1>
+    </div>
+
+    <!-- onmousedown, onmouseup and onclick Events -->
+    <img id="mybulb" onmousedown="bulbOn()" onmouseup="bulbOff()" src="image/bulboff.gif" width="200px" height="300px"/>
+  
+
+    
+   <script>
+    function mOver(obj){
+        obj.innerHTML="<h1>Out</h1>";
+    }
+    function mOut(obj){
+        obj.innerHTML="<h1>Over</h1>";
+    }
+   
+    //-----------------------------------------
+
+    function bulbOn(){
+       document.getElementById('mybulb').src="image/bulb.gif";
+    }
+    function bulbOff(){
+        document.getElementById('mybulb').src="image/bulboff.gif";
+    }
+    //-----------------------------------------
+   </script> 
+</body>
+</html>
